@@ -3,3 +3,4 @@ FROM jupyter/pyspark-notebook
 MAINTAINER archit patke <apatke@illinois.edu>
 
 USER root 
+RUN pip install pyspark

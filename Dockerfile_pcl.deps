@@ -1,0 +1,25 @@
+FROM ubuntu:20.04
+
+MAINTAINER archit patke <apatke@illinois.edu>
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# install prereqs
+USER root 
+RUN apt-get update
+RUN apt-get install -y software-properties-common
+RUN apt-get update
+RUN apt-get install -y libflann1.9 libflann-dev
+RUN apt-get install -y git build-essential linux-libc-dev
+RUN apt-get install -y cmake cmake-gui 
+RUN apt-get install -y libusb-1.0-0-dev libusb-dev libudev-dev
+RUN apt-get install -y mpi-default-dev openmpi-bin openmpi-common  
+RUN apt-get install -y libeigen3-dev
+RUN apt-get install -y libboost-all-dev
+RUN apt-get install -y libqhull* libgtest-dev
+RUN apt-get install -y freeglut3-dev pkg-config
+RUN apt-get install -y libxmu-dev libxi-dev 
+RUN apt-get install -y mono-complete
+RUN apt-get install -y openssh-client
+RUN apt-get install -y qtbase5-dev qt5-qmake qtbase5-dev-tools openjdk-8-jdk openjdk-8-jre
+RUN apt-get install -y libvtk7-dev libvtk7-qt-dev libvtk7.1p libvtk7.1p-qt
